@@ -83,18 +83,6 @@ if ( version_compare( $wp_version, '3.9-dev', '>=' ) ) {
 	wp_admin_css( 'colors-fresh', true );
 }
 
-if ( $is_iphone ) {
-	?>
-	<meta name="viewport" content="width=320; initial-scale=0.9; maximum-scale=1.0; user-scalable=0;" />
-	<style type="text/css" media="screen">
-	.login form, .login .message, #login_error { margin-left: 0px; }
-	.login #nav, .login #backtoblog { margin-left: 8px; }
-	.login h1 a { width: auto; }
-	#login { padding: 20px 0; }
-	</style>
-	<?php
-}
-
 do_action( 'login_enqueue_scripts' );
 do_action( 'password_protected_login_head' );
 ?>
@@ -103,7 +91,7 @@ do_action( 'password_protected_login_head' );
 <body class="login login-password-protected login-action-password-protected-login wp-core-ui">
 
 <div id="login">
-	<h1><a href="<?php echo esc_url( apply_filters( 'password_protected_login_headerurl', home_url( '/' ) ) ); ?>" title="<?php echo esc_attr( apply_filters( 'password_protected_login_headertitle', get_bloginfo( 'name' ) ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+	<h1><a href="<?php echo esc_url( apply_filters( 'password_protected_login_headerurl', home_url( '/' ) ) ); ?>" title="<?php echo esc_attr( apply_filters( 'password_protected_login_headertitle', get_bloginfo( 'name' ) ) ); ?>">portfolio.mukaitakeshi.org</a></h1>
 	<?php
 
 	// Add message
