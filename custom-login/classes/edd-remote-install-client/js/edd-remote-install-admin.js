@@ -164,8 +164,7 @@ jQuery(document).ready(function ($) {
                 var data = {
                     action: 'edd-do-remote-install-' + edd_ri_options.page,
                     download: downloadButton.data('edd-install'),
-                    license: license,
-					  url: edd_ri_options.url
+                    license: license
                 }
 
                 licenseInput.remove();
@@ -294,7 +293,6 @@ jQuery(document).ready(function ($) {
     };
 
     $.fn.progressFinish = function (res, downloadButton, license) {
-//		alert(res);
 
         var statusContainer = $(downloadButton).prev(".eddri-status");
 

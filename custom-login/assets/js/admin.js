@@ -49,11 +49,9 @@ jQuery(document).ready(function($) {
     $('a[data-edd-install]').each(function() {
 		var $this = $(this);
 		setTimeout( function() {
-			if ( $this.prev('.eddri-status').text() === 'Not Installed' ) {
-				$this.closest( $this.parent() ).children('a.button').hide();
-				$this.closest( $this.parent() ).children('a.button.show-if-not-purchased').show();
-			}
-		}, 500 );
+			if ( $this.prev('.eddri-status').text() === 'Not Installed' )
+				$this.closest( $this.parent() ).children('a.button.show-if-not-purchased').show()
+		}, 5000 );
 	});
     
 });
